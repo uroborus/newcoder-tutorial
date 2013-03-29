@@ -78,7 +78,8 @@ def create_gmap(data_file):
         placemark = create_placemark(placemark_info)
 
         document.appendChild(placemark.documentElement)
-
+    
+    # Create the KML file
     with open('file_sf.kml', 'w') as f:
         f.write(kml_doc.toprettyxml(indent="  ", encoding='UTF-8'))
 
